@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-z3xx#5=053hbu#4+)-ly(=%rqle3kl&2+onor1!o^s)y@3e48h
 DEBUG = True
 
 # TODO remove the local host address
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
