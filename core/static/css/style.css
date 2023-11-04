@@ -352,6 +352,7 @@ h6 {
 	background: #ffffff;
 }
 .service-box {
+	height: 300px !important;
 	padding: 50px;
 	border-radius: 4px;
 	-webkit-box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
@@ -606,6 +607,11 @@ h6 {
 	margin-bottom: 20px;
 	font-size: 14px;
 	width:100%;
+	outline: none !important;
+}
+
+.contact-form textarea:focus {
+    box-shadow: none !important;
 }
 .bttn {
 	position: relative;
@@ -631,7 +637,7 @@ h6 {
 @media all and (max-width:991px) {
 
 	.nav-scroll{
-		height: 100px !important;
+		height: 87px !important;
 	}
 
 	.navbar .navbar-collapse {
@@ -685,7 +691,7 @@ h6 {
 	}
 
 	.nav-scroll{
-		height: 100px !important;
+		height: 87px !important;
 		padding: 0;
 	}
 .nav-scroll .navbar-brand img, .navbar-brand img{
