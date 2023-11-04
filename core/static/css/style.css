@@ -634,17 +634,38 @@ h6 {
 		height: 100px !important;
 	}
 
-.navbar .navbar-collapse {
-	overflow: auto;
-	background: #c4c5c6 !important;
-	color: #fff !important;
-	text-align: left;
-	padding: 0 10px;
-	line-height: 60px !important;
-}
-.navbar .navbar-collapse .active {
-	color: white !important;
-}
+	.navbar .navbar-collapse {
+		overflow: auto;
+		background: #c4c5c6 !important;
+		color: #fff !important;
+		text-align: left;
+		padding: 0 10px;
+		line-height: 60px !important;
+	}
+
+	/* Add a horizontal line to navbar collapse menu items */
+	.navbar-collapse .navbar-nav .nav-item {
+		position: relative;
+  	}
+
+	  .navbar-collapse .navbar-nav .nav-item .nav-link {
+		font-weight: 900;
+  	}
+  
+  .navbar-collapse .navbar-nav .nav-item:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0; /* Set right to 0 to make the line span the full width */
+	height: 1px;
+	background-color: #1d3364; /* Change the color to your preference */
+  }
+
+	.navbar .navbar-collapse .active {
+		color: white !important;
+	}
+
 }
 @media all and (max-width:768px) {
 
