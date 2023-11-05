@@ -25,13 +25,17 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
-  <div class="container"> <a class="navbar-brand navbar-logo" href="/"> <img src="{% static 'images/Logo01.png' %}" alt="logo" class="logo-1" style="width: 25%; height: 25%;"> </a>
+  <div class="container"> 
+    <a class="navbar-brand custom-font" href="#">
+      <img src="{% static 'images/Logo01.png' %}" width="70" height="70" class="d-inline-block align-centre" alt="">
+      Happy Industries
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span> </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="0">Home</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">About Us</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Our Products</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Values</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5">Contact Us</a> </li>
       </ul>
     </div>
@@ -40,10 +44,10 @@
 <!-- End Navbar --> 
 
 <!-- Banner Carousel -->
-<div class="container-fluid" style="padding: 80px 0px 0px 0px !important; background: linear-gradient(to bottom, rgba(225, 224, 234, 0.7) 0%, #04052d 100%) !important; max-height: 600px !important;">
-  <div id="carouselExample" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">
+<div class="container-fluid" data-scroll-index="0" style="padding: 100px 0px 50px 0px !important; background: linear-gradient(to bottom, rgba(225, 224, 234, 0.7) 0%, #04052d 100%) !important; max-height: 600px !important; display: flex; justify-content: center; align-items: center;">
+  <div id="carouselExample" class="carouselPrograms carousel slide mx-auto d-block" data-ride="carousel" data-interval="2000">
     <div class="carousel-inner row w-100 mx-auto" role="listbox">
-      <div class="carousel-item col-md-4 active">
+      <div class="carousel-item col-md-4 active" style="padding-left: 0px !important; padding-right: 0px !important;">
         <div class="panel panel-default">
           <div class="panel-thumbnail">
             <a href="#" title="image 1" class="thumb">
@@ -55,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item col-md-4">
+      <div class="carousel-item col-md-4" style="padding-left: 0px !important; padding-right: 0px !important;">
         <div class="panel panel-default">
           <div class="panel-thumbnail">
             <a href="#" title="image 2" class="thumb">
@@ -66,8 +70,8 @@
             </a>
           </div>
         </div>
-      </div>
-      <div class="carousel-item col-md-4">
+      </div>  
+      <div class="carousel-item col-md-4" style="padding-left: 0px !important; padding-right: 0px !important;">
         <div class="panel panel-default">
           <div class="panel-thumbnail">
             <a href="#" title="image 2" class="thumb">
@@ -79,7 +83,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item col-md-4">
+      <div class="carousel-item col-md-4" style="padding-left: 0px !important; padding-right: 0px !important;">
         <div class="panel panel-default">
           <div class="panel-thumbnail">
             <a href="#" title="image 2" class="thumb">
@@ -126,7 +130,7 @@
             <p style="font-size: 20px; text-align: justify !important; text-justify: auto !important;" id="mission-p">Our mission at Happy Industries is to continue delivering exceptional plastic
               products that offer durability, functionality, and value to our customers. We strive
               to innovate continuously, reduce environmental impact, and contribute to the
-              well-being of communities we serve. Innovation is at the core of our mission. We invest in cutting-edge technology and research, enabling us to offer advanced solutions to our clients. We continuously seek ways to improve and evolve, ensuring we remain at the forefront of the industry.</p>
+              well-being of communities we serve. Innovation is at the core of our mission. We invest in cutting-edge technology and research, enabling us to offer advanced solutions to our clients.</p>
           </div>
            </div>
       </div>
@@ -557,6 +561,9 @@
 
 <script>
 
+
+
+
 document.getElementById('form_message').blur();
 
 $('#carouselExample').on('slide.bs.carousel', function (e) {
@@ -581,10 +588,6 @@ if (idx >= totalItems-(itemsPerSlide-1)) {
 }
 });
 
-
-
-
-
 $(document).ready(function() {
 /* show lightbox when clicking a thumbnail */
 $('a.thumb').click(function(event){
@@ -596,6 +599,18 @@ $('a.thumb').click(function(event){
     content.html($(this).html());
     $(".modal-profile").modal({show:true});
 });
+
+function closeNavbarOnClickOutside() {
+        $(document).on('click', function (e) {
+            if ($('.navbar-toggler').is(':visible') && $('.navbar-collapse').hasClass('show')) {
+                if (!$(e.target).closest('.navbar').length) {
+                    $('.navbar-toggler').click(); // Close the navbar
+                }
+            }
+        });
+    }
+
+    closeNavbarOnClickOutside();
 
 });
 // Fetch the paths from the body's data attributes

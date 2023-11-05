@@ -177,6 +177,24 @@ h6 {
 .nav-scroll .active {
 	position: relative;
 }
+.custom-font {
+	font-family: 'Pirulen';
+	color: #142447;
+	font-size: 15px !important;
+  }
+  /* Responsive font size for smaller screens */
+@media (max-width: 768px) {
+	.custom-font {
+	  font-size: 12px !important; /* Adjust the font size for smaller screens */
+	}
+  }
+  
+  /* Additional responsive font size for even smaller screens */
+  @media (max-width: 576px) {
+	.custom-font {
+	  font-size: 12px !important; /* Further adjust the font size for very small screens */
+	}
+  }
 .banner {
 	color:#ffffff;
 	text-align: center;
@@ -228,23 +246,6 @@ h6 {
 	transform: translate(-50%, -50%);
 	font-size: 16px;
   }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    color: black !important; /* Change to your desired color */
-  }
-
-.banner-btn {
-	background: #ab2f52;
-	padding: 12px 45px;
-	font-size: 15px;
-	border-radius: 30px;
-	margin-top: 30px;
-}
-.banner-btn:hover {
-	background: #ffffff;
-	color:#ab2f52;
-}
 .section-padding {
 	padding: 50px 0px;
 }
