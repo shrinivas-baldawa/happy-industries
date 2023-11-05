@@ -91,18 +91,6 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-thumbnail">
-            <a href="#" title="image 2" class="thumb">
-              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img05.jpg' %}" alt="slide 2">
-              <div class="overlay">
-                <p>Image 5 Text</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -117,19 +105,6 @@
 <!-- End Banner Carousel --> 
 
 <!-- About -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 style="color: #1d3364 !important;">Our Mission</h3>
-      <span class="close">&times;</span>
-    </div>
-    <p style="text-align: justify !important; text-justify: auto !important; margin-top: 1rem !important;">
-      Innovation is at the core of our mission. We invest in cutting-edge technology and research, enabling us to offer advanced solutions to our clients. We continuously seek ways to improve and evolve, ensuring we remain at the forefront of the industry.
-      Our clients are central to our mission. We work closely with them to understand their unique needs, offering tailored solutions that foster long-lasting partnerships. We are dedicated to their growth and success.
-    </p>
-  </div>
-</div>
-
 <div class="about-us section-padding" data-scroll-index='1'>
   <div class="container">
     <div class="row">
@@ -151,9 +126,9 @@
             <p style="font-size: 20px; text-align: justify !important; text-justify: auto !important;" id="mission-p">Our mission at Happy Industries is to continue delivering exceptional plastic
               products that offer durability, functionality, and value to our customers. We strive
               to innovate continuously, reduce environmental impact, and contribute to the
-              well-being of communities we serve.</p>
+              well-being of communities we serve. Innovation is at the core of our mission. We invest in cutting-edge technology and research, enabling us to offer advanced solutions to our clients. We continuously seek ways to improve and evolve, ensuring we remain at the forefront of the industry.</p>
           </div>
-          <a href="#" class="anchor-btn">Learn more <i class="fas fa-arrow-right pd-lt-10"></i></a> </div>
+           </div>
       </div>
       <div class="col-md-6 mb-50">
         <div class="section-img"> <img src="{% static 'images/mission-image.jpg' %}" alt="" class="img-responsive" /> </div>
@@ -360,7 +335,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 section-title text-center">
-        <h3>VALUES</h3>
+        <h3>Why Choose Us?</h3>
         <span class="section-title-line"></span> </div>
       <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-30">
         <div class="service-box bg-white text-center">
@@ -486,8 +461,8 @@
               <div class="icon"> <i class="fas fa-phone"></i> </div>
               <div class="content">
                 <h5>Phone :</h5>
-                <p style="font-size: 15px;">+91 9422211064</p>
                 <p style="font-size: 15px;">+91 9822006789</p>
+                <p style="font-size: 15px;">+91 9422211064</p>
               </div>
             </div>
             <div class="info-box">
@@ -532,11 +507,11 @@
                   </div>
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <input id="form_subject" type="text" name="subject" placeholder="Subject">
+                      <input id="form_subject" type="text" name="subject" placeholder="Subject *">
                     </div>
                   </div>
                   <div class="col-lg-12 form-group">
-                    <textarea id="form_message" name="message" class="form-control" placeholder=" Type Your Message " rows="4" required data-error="Please,leave us a message."></textarea>
+                    <textarea id="form_message" name="message" class="form-control" placeholder=" Type Your Message *" rows="4" required data-error="Please,leave us a message."></textarea>
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="col-lg-12 text-center">
@@ -582,6 +557,8 @@
 
 <script>
 
+document.getElementById('form_message').blur();
+
 $('#carouselExample').on('slide.bs.carousel', function (e) {
 
   
@@ -624,32 +601,6 @@ $('a.thumb').click(function(event){
 // Fetch the paths from the body's data attributes
 var logoBlack = $('body').data('logo-black');
 var logoWhite = $('body').data('logo-white');
-
-// Get the modal and the button that opens it
-var modal = document.getElementById("myModal");
-var openModalBtn = document.querySelector(".anchor-btn");
-
-// Get the close button
-var closeBtn = document.querySelector(".close");
-
-// Open the modal when "Learn more" is clicked
-openModalBtn.addEventListener("click", function (e) {
-  e.preventDefault(); // Prevent the default anchor behavior (scrolling)
-
-  modal.style.display = "block";
-});
-
-// Close the modal when the close button is clicked
-closeBtn.addEventListener("click", function () {
-  modal.style.display = "none";
-});
-
-// Close the modal when the background is clicked
-window.addEventListener("click", function (event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
 
 
 $(window).on("scroll", function() {

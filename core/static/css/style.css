@@ -643,11 +643,12 @@ h6 {
 	margin-bottom: 20px;
 	font-size: 14px;
 	width:100%;
-	outline: none !important;
 }
 
-.contact-form textarea:focus {
-    box-shadow: none !important;
+.form-control:focus{
+    border-color: black;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 .bttn {
 	position: relative;
