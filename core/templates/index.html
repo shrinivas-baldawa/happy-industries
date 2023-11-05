@@ -39,70 +39,82 @@
 </nav>
 <!-- End Navbar --> 
 
-<!-- Banner Image -->
-
-    <div class="container-fluid" style="padding:80px 0px 0px 0px !important; background:linear-gradient(to bottom, rgba(225, 224, 234, 0.7) 0%, #04052d 100%) !important; max-height: 600px !important;">
-      <div id="carouselExample" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">
-          <div class="carousel-inner row w-100 mx-auto" role="listbox">
-              <div class="carousel-item col-md-4  active">
-                 <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 1" class="thumb">
-                        <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img01.jpg' %}" alt="slide 1">
-                      </a>
-                    </div>
-                  </div>
+<!-- Banner Carousel -->
+<div class="container-fluid" style="padding: 80px 0px 0px 0px !important; background: linear-gradient(to bottom, rgba(225, 224, 234, 0.7) 0%, #04052d 100%) !important; max-height: 600px !important;">
+  <div id="carouselExample" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner row w-100 mx-auto" role="listbox">
+      <div class="carousel-item col-md-4 active">
+        <div class="panel panel-default">
+          <div class="panel-thumbnail">
+            <a href="#" title="image 1" class="thumb">
+              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img01.jpg' %}" alt="slide 1">
+              <div class="overlay">
+                <p>Washing Machine</p>
               </div>
-              <div class="carousel-item col-md-4  ">
-                <div class="panel panel-default">
-                  <div class="panel-thumbnail">
-                    <a href="#" title="image 2" class="thumb">
-                     <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img02.jpg' %}" alt="slide 2">
-                    </a>
-                  </div>
-                </div>
-            </div>
-              <div class="carousel-item col-md-4 ">
-                 <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 3" class="thumb">
-                       <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img03.jpg' %}" alt="slide 3">
-                      </a>
-                    </div>
-                  </div>
-              </div>
-              <div class="carousel-item col-md-4 ">
-                 <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 4" class="thumb">
-                       <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img04.jpg' %}" alt="slide 4">
-                      </a>
-                    </div>
-                  </div>
-              </div>
-              <div class="carousel-item col-md-4 ">
-                  <div class="panel panel-default">
-                    <div class="panel-thumbnail">
-                      <a href="#" title="image 5" class="thumb">
-                       <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img05.jpg' %}" alt="slide 5">
-                      </a>
-                    </div>
-                  </div>
-              </div>
-               
+            </a>
           </div>
-          <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-          </a>
+        </div>
       </div>
+      <div class="carousel-item col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-thumbnail">
+            <a href="#" title="image 2" class="thumb">
+              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img02.jpg' %}" alt="slide 2">
+              <div class="overlay">
+                <p>Image 2 Text</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-thumbnail">
+            <a href="#" title="image 2" class="thumb">
+              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img03.jpg' %}" alt="slide 2">
+              <div class="overlay">
+                <p>Image 3 Text</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-thumbnail">
+            <a href="#" title="image 2" class="thumb">
+              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img04.jpg' %}" alt="slide 2">
+              <div class="overlay">
+                <p>Image 4 Text</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-thumbnail">
+            <a href="#" title="image 2" class="thumb">
+              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img05.jpg' %}" alt="slide 2">
+              <div class="overlay">
+                <p>Image 5 Text</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-
-<!-- End Banner Image --> 
+</div>
+<!-- End Banner Carousel --> 
 
 <!-- About -->
 <div id="myModal" class="modal">
@@ -475,6 +487,7 @@
               <div class="content">
                 <h5>Phone :</h5>
                 <p style="font-size: 15px;">+91 9422211064</p>
+                <p style="font-size: 15px;">+91 9822006789</p>
               </div>
             </div>
             <div class="info-box">
@@ -549,7 +562,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <p style="font-size: 15px !important;"> <a href="https://www.ahappyindustries.com" target="_blank" rel="dofollow" style="font-size: 15px !important;">ahappyindustries.com</a> Copyright &copy; 2023.</p>
+        <p style="font-size: 15px !important;"> Copyright &copy; 2023 <a href="https://www.ahappyindustries.com" target="_blank" rel="dofollow" style="font-size: 15px !important;">ahappyindustries.com</a></p>
       </div>
     </div>
   </div>

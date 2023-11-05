@@ -142,6 +142,7 @@ h6 {
 	padding: 0;
 }
 .navbar .navbar-toggler {
+	padding: 0rem 0.5rem 0rem 0rem !important;
 	cursor: pointer;
 }
 .navbar .navbar-toggler span {
@@ -197,6 +198,42 @@ h6 {
 	font-family: 'ffmark-medium-italic';
 	font-size: 30px;
 }
+
+/* Add these styles to your CSS file */
+.panel-thumbnail {
+	position: relative;
+  }
+  
+  .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	color: white;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.3s;
+  }
+  
+  .panel-thumbnail:hover .overlay {
+	opacity: 1;
+  }
+  
+  .overlay p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 16px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    color: black !important; /* Change to your desired color */
+  }
+
 .banner-btn {
 	background: #ab2f52;
 	padding: 12px 45px;
@@ -633,64 +670,67 @@ h6 {
 	padding:7px 0px;
 }
 
-/* show 3 items */
-.carouselPrograms .carousel-inner .active,
-.carouselPrograms .carousel-inner .active + .carousel-item,
-.carouselPrograms .carousel-inner .active + .carousel-item + .carousel-item {
-	display: block;
-}
+@media (min-width: 768px) {
 
-.carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-.carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
-.carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
-	transition: none;
-}
+    /* show 3 items */
+    .carouselPrograms .carousel-inner .active,
+    .carouselPrograms .carousel-inner .active + .carousel-item,
+    .carouselPrograms .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
 
-.carouselPrograms .carousel-inner .carousel-item-next,
-.carouselPrograms .carousel-inner .carousel-item-prev {
-	position: relative;
-	transform: translate3d(0, 0, 0);
-}
+    .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
 
-.carouselPrograms .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-	position: absolute;
-	top: 0;
-	right: -33.333%;
-	z-index: -1;
-	display: block;
-	visibility: visible;
-}
+    .carouselPrograms .carousel-inner .carousel-item-next,
+    .carouselPrograms .carousel-inner .carousel-item-prev {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
 
-/* left or forward direction */
-.carouselPrograms .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-.carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item,
-.carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
-.carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-	position: relative;
-	transform: translate3d(-100%, 0, 0);
-	visibility: visible;
-}
+    .carouselPrograms .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.333%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
 
-/* farthest right hidden item must be abso position for animations */
-.carouselPrograms .carousel-inner .carousel-item-prev.carousel-item-right {
-	position: absolute;
-	top: 0;
-	left: 0%;
-	z-index: -1;
-	display: block;
-	visibility: visible;
-}
+    /* left or forward direction */
+    .carouselPrograms .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item,
+    .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
 
-/* right or prev direction */
-.carouselPrograms .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-.carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item,
-.carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
-.carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-	position: relative;
-	transform: translate3d(100%, 0, 0);
-	visibility: visible;
-	display: block;
-	visibility: visible;
+    /* farthest right hidden item must be abso position for animations */
+    .carouselPrograms .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* right or prev direction */
+    .carouselPrograms .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
 }
 
 @media all and (max-width:991px) {
