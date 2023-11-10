@@ -12,7 +12,6 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}"/>
 <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.min.css' %}"/>
 <link rel="shortcut icon" href="{% static 'images/Logo01.png' %}" type="image/x-icon" style="border-radius: 50px;">
-
 <!-- Font Google -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -24,10 +23,10 @@
 <body data-logo-black="{% static 'images/Logo01.png' %}" data-logo-white="{% static 'images/Logo01.png' %}">
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg" style="background-color: rgba(225, 224, 234, 1) !important;">
   <div class="container"> 
     <a class="navbar-brand custom-font" href="#">
-      <img src="{% static 'images/Logo01.png' %}" width="70" height="70" class="d-inline-block align-centre" alt="">
+      <img src="{% static 'images/Logo01.png' %}" width="70" height="70" class="d-inline-block align-centre" alt="Happy Industries">
       Happy Industries
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span> </button>
@@ -44,52 +43,52 @@
 <!-- End Navbar --> 
 
 <!-- Banner Carousel -->
-<div class="container-fluid" data-scroll-index="0" style="padding: 100px 0px 50px 0px !important; background: linear-gradient(to bottom, rgba(225, 224, 234, 0.7) 0%, #04052d 100%) !important; max-height: 600px !important; display: flex; justify-content: center; align-items: center;">
-  <div id="carouselExample" class="carouselPrograms carousel slide mx-auto d-block" data-ride="carousel" data-interval="2000">
+<div class="container-fluid" data-scroll-index="0" style="padding: 87px 5px 0px 3px !important; background: #04052d !important; max-height: 600px !important; display: flex; justify-content: center; align-items: center;">
+  <div id="carouselExample" class="carouselPrograms carousel slide mx-auto d-block" data-ride="carousel" data-interval="3500">
     <div class="carousel-inner row w-100 mx-auto" role="listbox">
-      <div class="carousel-item col-md-4 active" style="padding-left: 0px !important; padding-right: 0px !important;">
+      <div class="carousel-item col-md-4 active" data-slide="0" style="padding-left: 3px !important; padding-right: 3px !important;">
         <div class="panel panel-default">
           <div class="panel-thumbnail">
             <a href="#" title="image 1" class="thumb">
-              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img01.jpg' %}" alt="slide 1">
+              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img01.jpg' %}" alt="Electrical Appliances">
               <div class="overlay">
-                <p>Washing Machine</p>
+                <p>Electrical Appliances</p>
               </div>
             </a>
           </div>
         </div>
       </div>
-      <div class="carousel-item col-md-4" style="padding-left: 0px !important; padding-right: 0px !important;">
+      <div class="carousel-item col-md-4" data-slide="1" style="padding-left: 3px !important; padding-right: 3px !important;">
         <div class="panel panel-default">
           <div class="panel-thumbnail">
             <a href="#" title="image 2" class="thumb">
-              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img02.jpg' %}" alt="slide 2">
+              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img02.jpg' %}" alt="Handling Products">
               <div class="overlay">
-                <p>Plastic Containers</p>
+                <p>Handling Products</p>
               </div>
             </a>
           </div>
         </div>
       </div>  
-      <div class="carousel-item col-md-4" style="padding-left: 0px !important; padding-right: 0px !important;">
+      <div class="carousel-item col-md-4" data-slide="2" style="padding-left: 3px !important; padding-right: 3px !important;">
         <div class="panel panel-default">
           <div class="panel-thumbnail">
             <a href="#" title="image 2" class="thumb">
-              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img03.jpg' %}" alt="slide 2">
+              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img03.jpg' %}" alt="Automobile Parts">
               <div class="overlay">
-                <p>Auto Parts</p>
+                <p>Automobile Parts</p>
               </div>
             </a>
           </div>
         </div>
       </div>
-      <div class="carousel-item col-md-4" style="padding-left: 0px !important; padding-right: 0px !important;">
+      <div class="carousel-item col-md-4" data-slide="3" style="padding-left: 3px !important; padding-right: 3px !important;">
         <div class="panel panel-default">
           <div class="panel-thumbnail">
             <a href="#" title="image 2" class="thumb">
-              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img04.jpg' %}" alt="slide 2">
+              <img class="img-fluid mx-auto d-block" src="{% static 'images/carousel-images/img04.jpg' %}" alt="Household Products">
               <div class="overlay">
-                <p>Plastic Dust-Bins</p>
+                <p>Household Products</p>
               </div>
             </a>
           </div>
@@ -135,7 +134,7 @@
            </div>
       </div>
       <div class="col-md-6 mb-50">
-        <div class="section-img"> <img src="{% static 'images/mission-image.jpg' %}" alt="" class="img-responsive" /> </div>
+        <div class="section-img"> <img src="{% static 'images/mission-image.jpg' %}" alt="Our Mission" class="img-responsive" /> </div>
       </div>
     </div>
   </div>
@@ -589,6 +588,16 @@ if (idx >= totalItems-(itemsPerSlide-1)) {
 });
 
 $(document).ready(function() {
+
+// Activate Carousel
+$("#carouselExample").carousel();
+
+// Enable Carousel Indicators
+$(".carousel-indicators li").click(function () {
+  var index = $(this).index();
+  $("#carouselExample").carousel(index);
+});
+
 /* show lightbox when clicking a thumbnail */
 $('a.thumb').click(function(event){
   event.preventDefault();

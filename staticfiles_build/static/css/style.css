@@ -180,19 +180,19 @@ h6 {
 .custom-font {
 	font-family: 'Pirulen';
 	color: #142447;
-	font-size: 18px !important;
+	font-size: 25px !important;
   }
   /* Responsive font size for smaller screens */
 @media (max-width: 768px) {
 	.custom-font {
-	  font-size: 13px !important; /* Adjust the font size for smaller screens */
+	  font-size: 18px !important; /* Adjust the font size for smaller screens */
 	}
   }
   
   /* Additional responsive font size for even smaller screens */
   @media (max-width: 576px) {
 	.custom-font {
-	  font-size: 12px !important; /* Further adjust the font size for very small screens */
+	  font-size: 17px !important; /* Further adjust the font size for very small screens */
 	}
   }
 .banner {
