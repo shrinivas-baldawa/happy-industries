@@ -23,7 +23,7 @@
 <body data-logo-black="{% static 'images/Logo01.png' %}" data-logo-white="{% static 'images/Logo01.png' %}">
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg" style="background-color: rgba(225, 224, 234, 1) !important;">
+<nav class="navbar navbar-expand-lg" style="background-color: rgb(187, 186, 195) !important;">
   <div class="container"> 
     <a class="navbar-brand custom-font" href="#">
       <img src="{% static 'images/Logo01.png' %}" width="70" height="70" class="d-inline-block align-centre" alt="Happy Industries">
@@ -113,7 +113,7 @@
     <div class="row">
       <div class="col-md-12 section-title text-center">
         <h3>YOU ASK, WE MOULD.</h3>
-        <p id="intro-p" style="text-align: justify !important; text-justify: auto !important;">Happy Industries is a dynamic and innovative injection molding company that
+        <p id="intro-p" style="text-align: justify !important; text-justify: auto !important;">Happy Industries is a dynamic and innovative injection moulding company that
           specializes in the production of high-quality plastic products, catering to a wide
           range of industries. Since its establishment in 2017, Happy Industries has
           consistently delivered durable and reliable plastic solutions to meet the unique
@@ -129,7 +129,7 @@
             <p style="font-size: 20px; text-align: justify !important; text-justify: auto !important; word-spacing: 10px !important; line-height: 1.4 !important;" id="mission-p">Our mission at Happy Industries is to continue delivering exceptional plastic
               products that offer durability, functionality, and value to our customers. We strive
               to innovate continuously, reduce environmental impact, and contribute to the
-              well-being of communities we serve. Innovation is at the core of our mission. We invest in cutting-edge technology and research, enabling us to offer advanced solutions to our clients.</p>
+              well-being of the communities we serve. Innovation is at the core of our mission. We invest in cutting-edge technology and research, enabling us to offer advanced solutions to our clients.</p>
           </div>
            </div>
       </div>
@@ -347,7 +347,7 @@
             <h4 class="title-box">QUALITY</h4>
             <p>We are committed to delivering
               products of the highest quality,
-              meeting or exceeding industry
+              meeting industry
               standards.</p>
           </div>
         </div>
@@ -455,7 +455,7 @@
     <div class="row">
       <div class="col-md-12 section-title text-center">
         <h3>Contact Us</h3>
-        <p>For more details contact us.</p>
+        <!-- <p>For more details contact us.</p> -->
         <span class="section-title-line"></span> </div>
         <div class="col-lg-4">
           <div class="d-flex justify-content-center">
@@ -566,25 +566,25 @@
 document.getElementById('form_message').blur();
 
 $('#carouselExample').on('slide.bs.carousel', function (e) {
+  var $e = $(e.relatedTarget);
+  var idx = $e.index();
+  var itemsPerSlide = 3;
+  var totalItems = $('.carousel-item').length;
 
-  
-var $e = $(e.relatedTarget);
-var idx = $e.index();
-var itemsPerSlide = 3;
-var totalItems = $('.carousel-item').length;
-
-if (idx >= totalItems-(itemsPerSlide-1)) {
+  if (idx >= totalItems - (itemsPerSlide - 1)) {
     var it = itemsPerSlide - (totalItems - idx);
-    for (var i=0; i<it; i++) {
-        // append slides to end
-        if (e.direction=="left") {
-            $('.carousel-item').eq(i).appendTo('.carousel-inner');
-        }
-        else {
-            $('.carousel-item').eq(0).appendTo('.carousel-inner');
-        }
+
+    for (var i = 0; i < it; i++) {
+      // append slides to end
+      if (e.direction == "left") {
+        var next = $('.carousel-item').eq(i);
+        next.appendTo('.carousel-inner');
+      } else {
+        var prev = $('.carousel-item').eq(-1 - i);
+        prev.prependTo('.carousel-inner');
+      }
     }
-}
+  }
 });
 
 $(document).ready(function() {
