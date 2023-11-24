@@ -10,8 +10,8 @@ def indexPage(request):
             res = sm(
             subject = request.POST['subject'],
             message = request.POST['message'],
-            from_email = 'shrinivasbbaldawa@gmail.com',
-            recipient_list = ['shrinivasbbaldawa@gmail.com'],
+            from_email = request.POST['email'],
+            recipient_list = ['contactus@ahappyindustries.com'],
             fail_silently=False,
             )
             messages.success(request, 'Message Sent!')
