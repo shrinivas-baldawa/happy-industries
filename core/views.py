@@ -1,21 +1,26 @@
 from django.shortcuts import render
-from django.core.mail import send_mail as sm
+from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
 from django.core.mail import BadHeaderError
 from django.contrib import messages
 
 # Create your views here.
 def indexPage(request):
+    context = {
+        'key' : settings.GOOGLE_MAPS_API_KEY
+    }
     if(request.method == 'POST'):
         try:
-            res = sm(
-            subject = request.POST['subject'],
-            message = request.POST['message'],
-            from_email = request.POST['email'],
-            recipient_list = ['contactus@ahappyindustries.com'],
-            fail_silently=False,
+            mymessage = EmailMultiAlternatives(
+                subject=request.POST['subject'],
+                body="This is a message from " + request.POST['name'] + " \n " + " \n " + request.POST['message'],
+                to=['contactus@ahappyindustries.com'],
+                from_email='contactus@ahappyindustries.com',
+                reply_to=[request.POST['email']]
             )
+            mymessage.send()
             messages.success(request, 'Message Sent!')
         except BadHeaderError:
             return messages.error("Invalid Header")
         
-    return render(request, 'index.html')
+    return render(request, 'index.html', context)

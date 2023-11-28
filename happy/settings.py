@@ -12,10 +12,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -26,9 +28,7 @@ SECRET_KEY = 'django-insecure-z3xx#5=053hbu#4+)-ly(=%rqle3kl&2+onor1!o^s)y@3e48h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# TODO remove the local host address
-ALLOWED_HOSTS = ['*' , '10.0.0.4']
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -134,6 +134,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 EMAIL_USE_TLS = True
+
+# These are optional -- if they're set as environment variables they won't
+# need to be set here as well
+EMAIL_HOST_USER = os.getenv('HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD')
+
+# Additionally, if you are not using the default AWS region of us-east-1,
+# you need to specify a region, like so:
+AWS_SES_REGION_NAME = 'ap-south-1'
 EMAIL_HOST = 'email-smtp.ap-south-1.amazonaws.com'
-EMAIL_HOST_USER = 'AKIAZIXPIRV6LKPLP7FN'
-EMAIL_HOST_PASSWORD = 'BE6pzSCKW/ZXZHECYCfpYZ+spa+LzbkovP+8n1+tTL5l'
+
+GOOGLE_MAPS_API_KEY = os.getenv('GOOGLE_MAPS_API_KEY')
