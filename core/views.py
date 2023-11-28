@@ -6,9 +6,6 @@ from django.contrib import messages
 
 # Create your views here.
 def indexPage(request):
-    context = {
-        'key' : settings.GOOGLE_MAPS_API_KEY
-    }
     if(request.method == 'POST'):
         try:
             mymessage = EmailMultiAlternatives(
@@ -23,4 +20,4 @@ def indexPage(request):
         except BadHeaderError:
             return messages.error("Invalid Header")
         
-    return render(request, 'index.html', context)
+    return render(request, 'index.html')
